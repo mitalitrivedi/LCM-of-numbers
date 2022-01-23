@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+int lcm(int x,int y)
+{
+    static int m=0;
+    m=m+x;
+    if(m%x==0&&m%y==0)
+    {
+        return m;
+    }
+    else
+    {
+        return lcm(x,y);
+    }
+}
+int main()
+{
+    int i,j;
+    printf("Enter any two numbers:");
+    scanf("%d %d",&i,&j);
+    printf("LCM of given two numbers is:%d",lcm(i,j));
+    getch();
+}
